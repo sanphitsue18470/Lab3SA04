@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     flexDirection:'row',
     justifyContent:'space-between' ,
     textAlign:'center',
-    fontSize:30,
+    fontSize:28,
     color:'#fff',    
    
       }

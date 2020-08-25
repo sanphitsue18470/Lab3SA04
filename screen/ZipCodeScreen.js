@@ -1,22 +1,23 @@
  import React from 'react'
-import { FlatList, View, Text, StatusBar} from 'react-native'
+import { FlatList, View, Text, StatusBar, StyleSheet, ImageBackground} from 'react-native'
 import { TouchableHighlight } from 'react-native-gesture-handler'
 import { useNavigation } from '@react-navigation/native'
 
 const availableZipItems = [
-    { place: 'Hatyai', code: '90110' },
-    { place: 'Trang', code: '92000' },
-    { place: 'Chiangmai', code: '50000' },
-    { place: 'Khonkaen', code: '40000' },
-    { place: 'Chonburi', code: '20000' },
+    { place: 'Hatyai', code: '90110', pic: require("../hatyai.jpg") },
+    { place: 'Trang', code: '92000', pic: require("../trang.jpg") },
+    { place: 'Chiangmai', code: '50000',pic: require("../chiangmai.jpg") },
+    { place: 'Khonkaen', code: '40000',pic: require("../khonkaen.jpg" )},
+    { place: 'Chonburi', code: '20000',pic: require("../chonburi.jpg" )},
 ]
    
 
-const ZipItem = ({place, code, navigation}) => (
+const ZipItem = ({place, code, navigation,pic}) => (
     <TouchableHighlight onPress={() => navigation.navigate('Weather', { zipCode: code})}>
-    <View>
-    <Text>{place}</Text>
-    <Text >{code}</Text>
+    <View >
+    <ImageBackground source={pic} style={styles.backdrop}></ImageBackground>
+    <Text style={styles.Text}>{place}</Text>
+    <Text style={styles.Text}>{code}</Text>
     </View>
     </TouchableHighlight>
     )
@@ -24,7 +25,7 @@ const ZipItem = ({place, code, navigation}) => (
     export default function ZipCodeScreen(){
      const navigation = useNavigation()
      return (
-     <View>
+     <View >
      <FlatList
      data={availableZipItems}
      keyExtractor={_keyExtractor}
@@ -35,4 +36,21 @@ const ZipItem = ({place, code, navigation}) => (
      );
     
     }
+    const styles = StyleSheet.create({
+        backdrop: {
+          flexDirection: "column",
+          alignItems: "center",
+          width: 415,
+          height: 100,
+        },
+       Text: {
+        flexDirection:'row',
+        justifyContent:'space-between' ,
+        textAlign:'center',
+        fontSize:20,
+        color:'red',    
+       
+          },
+    }
+    );
     

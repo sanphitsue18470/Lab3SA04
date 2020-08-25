@@ -4,7 +4,7 @@ import Forecast from './Forecast'
 
 export default function Weather(props){
     
-    const [forecastInfo, setforecastInfo] = useState({
+    const [forecastInfo, setForecastInfo] = useState({
         main: '-',
         description: '-',
         temp: 0

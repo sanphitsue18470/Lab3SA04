@@ -49,7 +49,7 @@ const ZipItem = ({place, code, navigation,pic}) => (
         textAlign:'center',
         fontSize:18,
         color:'red',
-        backgroundColor: '#33FFFF'    
+        backgroundColor: '#33FFFF' 
        
           },
     }

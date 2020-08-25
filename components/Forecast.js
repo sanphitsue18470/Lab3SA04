@@ -23,8 +23,8 @@ export default function Forecast(props){
         <View>
             <Text  style={styles.Text}>{props.main}</Text>
             <Text  style={styles.Text}>{props.description}</Text>
-            <Text  style={styles.Text}>{props.temp}</Text>
-            <Text  style={styles.Text}>°C</Text>
+            <Text  style={styles.Text}>{props.temp}°C</Text>
+            <Text style={styles.testst}> Feel like: {props.feels_like} °C</Text>
         </View>
         
     )
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     flexDirection:'row',
     justifyContent:'space-between' ,
     textAlign:'center',
-    fontSize:28,
+    fontSize:25,
     color:'#fff',    
    
       }

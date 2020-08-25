@@ -17,9 +17,4 @@ export default function App() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    paddingTop: Constants.statusBarHeight
-  },
-});
 

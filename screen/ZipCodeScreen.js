@@ -47,7 +47,7 @@ const ZipItem = ({place, code, navigation,pic}) => (
         flexDirection:'row',
         justifyContent:'space-between' ,
         textAlign:'center',
-        fontSize:20,
+        fontSize:18,
         color:'red',    
        
           },

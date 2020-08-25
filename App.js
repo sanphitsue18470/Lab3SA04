@@ -1,8 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Weather from './components/weather';
+
 import Constants from 'expo-constants';
+import Weather from './components/Weather';
 
 export default function App() {
   const doIt = () => {
@@ -10,7 +11,7 @@ export default function App() {
   }
   return (
     <View style={styles.container}>
-      <Weather zipCode="20000"/>
+      <Weather zipCode="90110"/>
       <StatusBar style="auto" />
     </View>
   );
